@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <title>Nash's Basement</title>
+  <meta name="description" content="Amateur programmer on frontends & object-oriented">
+  <meta name="keywords" content="Nash, Wormwal, Calvada">
+  <meta name="robots" content="nofollow, noindex, none, noarchive, nosnippet, noimageindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-GitHub: #101411;
+        --color-Youtube: #FF0033;
+      }
+    </style>
+</head>
+
+<body>
+  <header>
+    <!--First time proper header, take some notes on this.-->
+    <!--Nav theme config-->
+    <nav
+      class="bg-neutral-800 text-white px-6 py-4 flex items-center justify-between shadow-lg shadown-black fixed w-full top-0 z-50 no-underline">
+      <div class="text-xl font-bold font-mono">
+        <a href="#">
+          <h1 class="no-underline">Nash's Basement</h1>
+        </a>
+      </div>
+      <!--Desktop nav links-->
+      <ul class="hidden md:flex space-x-10 text-lg font-mono font-semibold">
+        <li>
+          <a href="#" class="hover:text-sky-100 transition duration-300 ease-in-out">Home</a>
+        </li>
+        <li>
+          <a href="#section-about" class="hover:text-sky-100 transition duration-300 ease-in-out">About</a>
+        </li>
+        <li>
+          <a href="#section-tech" class="hover:text-sky-100 transition duration-300 ease-in-out">Tech</a>
+        </li>
+        <li>
+          <a href="#section-projects" class="hover:text-sky-100 transition duration-300 ease-in-out">Projects</a>
+        </li>
+        <li>
+          <a href="#section-contact" class="hover:text-sky-100 transition duration-300 ease-in-out">Contact</a>
+        </li>
+      </ul>
+      <!--Burger btn-->
+      <button id="menu-btn" class="md:hidden focus:outline-none z-50" aria-label="Toggle menu">
+        <svg id="menu-open" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-close" class="w-8 h-8 text-white hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <!--Mobile nav links-->
+      <ul id="menu"
+        class="absolute top-full left-0 w-full bg-neutral-700 text-white flex flex-col md:hidden hidden rounded-b-lg shadow-xl overflow-hidden">
+        <li class="border-b border-neutral-400">
+          <a href="#"
+            class="block px-6 py-4 text-lg font-mono font-semibold hover:bg-neutral-800 hover:text-sky-100 transition duration-300">Home</a>
+        </li>
+        <li class="border-b border-neutral-400">
+          <a href="#section-about"
+            class="block px-6 py-4 text-lg font-mono font-semibold hover:bg-neutral-800 hover:text-sky-100 transition duration-300">About</a>
+        </li>
+        <li class="border-b border-neutral-400">
+          <a href="#section-tech"
+            class="block px-6 py-4 text-lg font-mono font-semibold hover:bg-neutral-800 hover:text-sky-100 transition duration-300">Tech</a>
+        </li>
+        <li class="border-b border-neutral-400">
+          <a href="#section-projects"
+            class="block px-6 py-4 text-lg font-mono font-semibold hover:bg-neutral-800 hover:text-sky-100 transition duration-300">Projects</a>
+        </li>
+        <li>
+          <a href="#section-contact"
+            class="block px-6 py-4 text-lg font-mono font-semibold hover:bg-neutral-800 hover:text-sky-100 transition duration-300">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <br /><br />
+  <main class="bg-zinc-800 text-white">
+    <br />
+    <div class="xl:flex">
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <img class="m-auto block" src="src/resources/images/index/nash.webp" alt="Picture of Nash" />
+      </div>
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <h1 class="font-mono text-6xl font-bold m-auto block">Welcome to Nash's Basement</h1>
+        <p class="font-mono text-base text-justify">I'm Nash. This is my web.</p>
+        <br />
+        <div class="block">
+          <div
+            class="bg-GitHub hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://github.com/Wormwal"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/GitHub_Invertocat_White_Clearspace.png" alt="GitHub" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Wormwal on GitHub</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-linear-to-r from-[#ff7a00] via-[#ff0169] to-[#d300c5] hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.instagram.com/wormwal.builds/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/Instagram_Glyph_White.png" alt="Instagram" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                @wormwal.builds on Instagram</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-lime-600 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.planetminecraft.com/member/wormwal/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/Planet Minecraft.svg" alt="Planet Minecraft" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Wormwal on Planet Minecraft</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-Youtube hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.youtube.com/@wormwal.builds/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/yt_icon_white_digital.png" alt="Youtube" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                @wormwal.builds on YouTube</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-zinc-700 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black no-underline">
+            <div class="relative group">
+              <a href="mailto:nash-personal.carat626@aleeas.com">
+                <p class="pt-2.5 pb-2.5 m-auto font-mono text-sm text-center">
+                  nash-personal.carat626@aleeas.com></p>
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Mail to e-mail address</div>
+            </div>
+          </div>
+          <br />
+          <p class="font-mono text-sm">*For private communication or topics, you may reach out to me via e-mail.</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="xl:flex">
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md bg-zinc-700">
+        <h2 id="section-about" class="font-mono text-4xl font-bold m-auto block">About</h2>
+      </div>
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md bg-zinc-700">
+        <br />
+        <p class="font-serif text-base"><em>"The greatest programming language out there is the one you
+            use"</em></p>
+        <br />
+        <p class="font-mono text-base text-justify">I strive to
+          learn new tech tools, read and produce documentations that help
+          fellow software engineers in every stage of development lifecycle, and design creative digital content and
+          assets for
+          the internet.<br />You can find
+          me at my best and happiest when I dive into learning new things I haven't know before, creatively thinking how
+          to solve complex software problems, creating content and
+          assets for my favourite
+          sandbox video game <i>Minecraft</i>, taking a walk outside see new things, or getting myself really deep into
+          story-rich
+          RPG(s), tycoon
+          video games, and pure retro music and films.</p>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div class="xl:flex">
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <h2 id="section-tech" class="font-mono text-4xl font-bold m-auto block">Tech</h2>
+      </div>
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <p class="font-mono font-bold text-2xl">Software Development</p>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-orange-600 to-orange-400 hover:shadow-md hover:shadow-black hover:scale-105 hover:duration-300 hover:bg-linear-to-l not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">HTML</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Advance</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-blue-400 to-purple-800 hover:shadow-md hover:shadow-black hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">CSS</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Advance</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-sky-400 to-sky-800 hover:shadow-md hover:shadow-black hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Tailwind CSS</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Intermediate</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-zinc-800 via-orange-500 to-orange-600 hover:shadow-md hover:shadow-black hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">JavaScript</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Beginner</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-sky-600 via-sky-800 to-yellow-500 hover:shadow-md hover:shadow-black hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Python</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Beginner</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-linear-to-r from-orange-400 via-amber-600 to-cyan-950 hover:shadow-md hover:shadow-black hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Java</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Beginner</p>
+        </div>
+        <p class="font-mono font-bold text-2xl">Multimedia</p>
+        <div class="flex">
+          <div
+            class="bg-zinc-700 hover:shadow-md hover:shadow-black hover:scale-105 hover:duration-300 hover:bg-zinc-950 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Video editing</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Advance</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-zinc-600 hover:shadow-md hover:shadow-black hover:scale-105 hover:duration-300 hover:bg-zinc-900 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Game design</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Intermediate</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-zinc-700 hover:shadow-md hover:shadow-black hover:scale-105 hover:duration-300 hover:bg-zinc-950 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">Audio programming</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Beginner</p>
+        </div>
+        <div class="flex">
+          <div
+            class="bg-zinc-600 hover:shadow-md hover:shadow-black hover:scale-105 hover:duration-300 hover:bg-zinc-900 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+            <p class="font-mono">3D Modelling</p>
+          </div>
+          <p class="bg-yellow-600 font-mono">Beginner</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="xl:flex">
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md bg-zinc-700">
+        <h2 id="section-projects" class="font-mono text-4xl font-bold m-auto block">Projects</h2>
+      </div>
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md bg-zinc-700">
+        <br />
+        <div
+          class="bg-zinc-700 hover:shadow-md hover:shadow-black hover:bg-zinc-900 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+          <p class="font-mono text-2xl">Project Calvada</p>
+          <img />
+          <p class="font-mono text-base">A free-to-play adventure nation map rich with lore and settlements dotted
+            around a custom-built terrain created on Minecraft: Java Edition.</p>
+          <div class="flex justify-end md:w-full">
+            <div class="flex font-mono font-thin items-center justify-end w-full lg:w-1/2">
+              <div class="flex justify-between">
+                <div class="relative group inline-block"><a href="">
+                    <p class="underline">Webpage</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Read more info</div>
+                </div>
+                <div class="relative group inline-block"><a href="">
+                    <p class="pl-2.5 underline">🡣</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Download</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div
+          class="bg-zinc-700 hover:shadow-md hover:shadow-black hover:bg-zinc-900 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+          <p class="font-mono text-2xl">Project Calvada Resource Pack</p>
+          <img />
+          <p class="font-mono text-base">A Minecraft: Java Edition resource pack created for use with
+            <em>modern</em>-themed Minecraft worlds as well as Project Calvada itself. Textures created using Krita and
+            its variations done using extensive JSON data format.
+          </p>
+          <div class="flex justify-end md:w-full">
+            <div class="flex font-mono font-thin items-center justify-end w-full lg:w-1/2">
+              <div class="flex justify-between">
+                <div class="relative group inline-block"><a href="https://github.com/Wormwal/CalvadaResourcePack">
+                    <p class="underline">GitHub</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Source code on GitHub</div>
+                </div>
+                <div class="relative group inline-block"><a href="">
+                    <p class="pl-2.5 underline">🡣</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Download</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div
+          class="bg-zinc-700 hover:shadow-md hover:shadow-black hover:bg-zinc-900 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5">
+          <p class="font-mono text-2xl">Nash's Basement</p>
+          <img />
+          <p class="font-mono text-base">A personal static website using HTML, Tailwind CSS, and JavaScript.</p>
+          <div class="flex justify-end md:w-full">
+            <div class="flex font-mono font-thin items-center justify-end w-full lg:w-1/2">
+              <div class="flex justify-between">
+                <div class="relative group inline-block"><a href="https://github.com/Wormwal/personal">
+                    <p class="underline">GitHub</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Source code on GitHub</div>
+                </div>
+                <div class="relative group inline-block"><a href="https://github.com/Wormwal/personal">
+                    <p class="pl-2.5 underline">🡥</p>
+                  </a>
+                  <div
+                    class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2">
+                    Open website</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+    <br />
+    <div class="xl:flex">
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <h2 id="section-contact" class="font-mono text-4xl font-bold m-auto block">Contact</h2>
+      </div>
+      <div class="pl-2.5 pr-2.5 pb-2.5 m-auto relative w-full max-w-md">
+        <p class="font-mono font-bold text-2xl">Want my assist? Reach me out!</p>
+        <br />
+        <div class="block">
+          <div
+            class="bg-GitHub hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://github.com/Wormwal"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/GitHub_Invertocat_White_Clearspace.png" alt="GitHub" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Wormwal on GitHub</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-linear-to-r from-[#ff7a00] via-[#ff0169] to-[#d300c5] hover:bg-linear-to-l hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.instagram.com/wormwal.builds/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/Instagram_Glyph_White.png" alt="Instagram" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                @wormwal.builds on Instagram</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-lime-600 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.planetminecraft.com/member/wormwal/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/Planet Minecraft.svg" alt="Planet Minecraft" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Wormwal on Planet Minecraft</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-Youtube hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black">
+            <div class="relative group">
+              <a href="https://www.youtube.com/@wormwal.builds/"><img class="pt-2.5 pb-2.5 max-w-1/6 m-auto"
+                  src="src/resources/images/platforms/yt_icon_white_digital.png" alt="Youtube" />
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                @wormwal.builds on YouTube</div>
+            </div>
+          </div>
+          <br />
+          <div
+            class="bg-zinc-700 hover:scale-105 hover:duration-300 not-hover:duration-300 rounded-md pl-2.5 pr-2.5 shadow-md shadow-black no-underline">
+            <div class="relative group">
+              <a href="mailto:nash-personal.carat626@aleeas.com">
+                <p class="pt-2.5 pb-2.5 m-auto font-mono text-sm text-center">
+                  nash-personal.carat626@aleeas.com></p>
+              </a>
+              <div
+                class="absolute text-center hidden group-hover:block bg-black text-white px-2 py-1 text-xs rounded bottom-full left-1/2 transform -translate-x-1/2 font-mono">
+                Mail to e-mail address</div>
+            </div>
+          </div>
+          <br />
+          <p class="font-mono text-sm">*For private communication or topics, you may reach out to me via e-mail.</p>
+        </div>
+      </div>
+    </div>
+    <br />
+  </main>
+  <footer
+    class="pl-2.5 pr-2.5 pb-2.5 pt-2.5 relative w-full bg-neutral-800 font-mono shadow-sm shadow-black text-white text-sm text-center">
+    <p>End of the basement!<em> This website is maintained by Nash on <a
+          href="https://github.com/Wormwal/personal"><span class="underline">GitHub</span></a>.</em>
+    </p>
+  </footer>
+  <!--Header nav script-->
+  <script src="src/header.js"></script>
+</body>
+
+</html>
