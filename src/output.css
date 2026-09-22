@@ -559,61 +559,47 @@
     --tw-duration: 300ms;
     transition-duration: 300ms;
   }
-  @media not (hover: hover) {
-    .not-hover\:duration-300 {
-      --tw-duration: 300ms;
-      transition-duration: 300ms;
+  .group-hover\:block:is(:where(.group):hover *) {
+    display: block;
+  }
+  .hover\:scale-105:hover {
+    --tw-scale-x: 105%;
+    --tw-scale-y: 105%;
+    --tw-scale-z: 105%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .hover\:bg-neutral-800:hover {
+    background-color: var(--color-neutral-800);
+  }
+  .hover\:bg-zinc-900:hover {
+    background-color: var(--color-zinc-900);
+  }
+  .hover\:bg-zinc-950:hover {
+    background-color: var(--color-zinc-950);
+  }
+  .hover\:bg-linear-to-l:hover {
+    --tw-gradient-position: to left;
+    @supports (background-image: linear-gradient(in lab, red, red)) {
+      --tw-gradient-position: to left in oklab;
+    }
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .hover\:text-sky-100:hover {
+    color: var(--color-sky-100);
+  }
+  .hover\:shadow-md:hover {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .hover\:shadow-black:hover {
+    --tw-shadow-color: #000;
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-shadow-alpha), transparent);
     }
   }
-  @media (hover: hover) {
-    .group-hover\:block:is(:where(.group):hover *) {
-      display: block;
-    }
-    .hover\:scale-105:hover {
-      --tw-scale-x: 105%;
-      --tw-scale-y: 105%;
-      --tw-scale-z: 105%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-    .hover\:bg-neutral-800:hover {
-      background-color: var(--color-neutral-800);
-    }
-    .hover\:bg-zinc-900:hover {
-      background-color: var(--color-zinc-900);
-    }
-    .hover\:bg-zinc-950:hover {
-      background-color: var(--color-zinc-950);
-    }
-    .hover\:bg-linear-to-l:hover {
-      --tw-gradient-position: to left;
-    }
-    @supports (background-image: linear-gradient(in lab, red, red)) {
-      .hover\:bg-linear-to-l:hover {
-        --tw-gradient-position: to left in oklab;
-      }
-    }
-    .hover\:bg-linear-to-l:hover {
-      background-image: linear-gradient(var(--tw-gradient-stops));
-    }
-    .hover\:text-sky-100:hover {
-      color: var(--color-sky-100);
-    }
-    .hover\:shadow-md:hover {
-      --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-    .hover\:shadow-black:hover {
-      --tw-shadow-color: #000;
-    }
-    @supports (color: color-mix(in lab, red, red)) {
-      .hover\:shadow-black:hover {
-        --tw-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-shadow-alpha), transparent);
-      }
-    }
-    .hover\:duration-300:hover {
-      --tw-duration: 300ms;
-      transition-duration: 300ms;
-    }
+  .hover\:duration-300:hover {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
   }
   .focus\:outline-none:focus {
     --tw-outline-style: none;
