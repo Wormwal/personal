@@ -1,1 +1,6 @@
-@import "tailwind.css";
+@import "tailwindcss";
+
+@theme {
+    --color-GitHub: #101411;
+    --color-Youtube: #FF0033;
+}
