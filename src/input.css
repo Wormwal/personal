@@ -5,4 +5,23 @@
 @theme {
     --color-GitHub: #101411;
     --color-Youtube: #FF0033;
+    --color-Calvada-1: #39864d;
+    --color-Calvada-2: #863939;
+    --color-Calvada-3: #398686;
+
+    --animate-fade-in-scale: fade-in-scale 300ms ease-in-out;
+    @keyframes fade-in-scale {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        50% {
+            opacity: 2;
+            transform: translateY(2px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
 }
